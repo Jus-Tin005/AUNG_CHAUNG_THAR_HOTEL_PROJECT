@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aung Chaung Thar -  Hotel Project</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- bs css and js -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <!-- Magnific popup css and js -->
+        <link rel="stylesheet" href="./assets/libs/magnificpopupmaster/Magnific-Popup-master/dist/magnific-popup.css">
+        <!-- custom css -->
+        <link rel="stylesheet" href="./style.css" type="text/css">
+        <!-- icon -->
+        <link rel="icon" href="" type="./assets/img/fav/favicon3.png" sizes="16x16">
+</head>
+<body>
+        <!-- START HEADER SECTION -->
+        <header>
+                <!-- Start navbar -->
+                        <nav class="navbar navbar-expand-md navbar-dark">
+                                <div class="container">
+                                        <button class="navbar-toggler ms-auto" data-bs-toggle="collapse" data-bs-target="#mynav">
+                                                <span class="navbar-toggler-icon"></span>
+                                        </button>
+
+                                        <div id="mynav" class="navbar-collapse collapse">
+                                                <ul class="navbar-nav me-auto">
+                                                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                                                        <li class="nav-item"><a href="#" class="nav-link active">Rooms</a></li>
+                                                        <li class="nav-item"><a href="#" class="nav-link active">Blog</a></li>
+                                                        <li class="nav-item"><a href="#" class="nav-link active">Restarunt</a></li>
+                                                        <li class="nav-item"><a href="#" class="nav-link active">Contact</a></li>
+                                                        <li class="nav-item dropdowns"><a href="#" class="nav-link active drop-btn" onclick="dropBtn(event);">FAQ</a>
+                                                                <div  class="dropdown-contents myDropdowns">
+                                                                        <input type="text" name="search" id="search" class="search" onkeyup="dropFilter();" placeholder="search....">
+                                                                        <a href="javascript:void(0);">Room Booking</a>
+                                                                        <a href="javascript:void(0);">Transportation</a>
+                                                                        <a href="javascript:void(0);">payment</a>
+                                                                        <a href="javascript:void(0);">Wifi Connect</a>
+                                                                        <a href="javascript:void(0);">Food</a>
+                                                                        <a href="javascript:void(0);">Bar</a>
+                                                                        <a href="javascript:void(0);">Spa</a>
+                                                                </div>
+                                                        </li>
+
+                                                </ul>
+
+                                                <div class="dropdown float-sm-end">
+                                                        <a href="#" class="dropdown-toggle text-decoration-none" data-bs-toggle="dropdown">
+                                                                <img src="./assets/img/users/user1.jpg" class="rounded-circle" width="32" height="32" alt="">
+                                                        </a>
+
+                                                        <ul class="dropdown-menu text-small">
+                                                                <li><a href="" class="dropdown-item">Profile</a></li>
+                                                                <li>
+                                                                        <a href="" class="dropdown-item">Invoices</a>
+                                                                </li>
+                                                                <li>
+                                                                        <hr class="dropdown-divider" />
+                                                                </li>
+                                                                <li><a href="" class="dropdown-item">Sign Out</a></li>
+                                                        </ul>
+                                                </div>
+                                        </div>
+
+
+
+                                </div>
+                        </nav>
+                <!-- End navbar -->
+
+                <!-- Start banner -->
+                <div class="container-fluid">
+                        <div id="banners" class="banners">
+                                <h1 class="display-4 banner-headers">
+                                        Aung Chaung Thar Hotel
+                                </h1>
+                                <p class="banner-paragraphs">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempore velit, aperiam neque eum officia, incidunt perferendis autem ut omnis quas, provident nesciunt repudiandae similique expedita sunt eius sequi dolorum?
+                                </p>
+                        </div>
+                </div>
+                <!-- End banner -->
+        </header>
+        <!-- END HEADER SECTION -->
+
+
+
+        <!-- START BOOKING SECTION -->
+        <section id="section" class="text-center search-rooms">
+                <form action="" method="">
+                        <input type="date" name="checkin"  id="checkin"  class="form-control"/>
+                        <input type="date" name="checkout"  id="checkout"  class="form-control"/>
+                        <select name="adult" id="adult" class="form-control">
+                                <option value="1">1 adult</option>
+                                <option value="2">2 adult</option>
+                                <option value="3">3 adult</option>
+                                <option value="4">4 adult</option>
+                        </select>
+                        <input type="text" name="searchRooms" id="searchRooms" class="form-control" placeholder="Search Something...">
+                        <input type="button" class="btn btn-primary rounded-0" value="Search Rooms...">
+                </form>
+        </section>
+        <!-- END BOOKING SECTION -->
+
+
+
+        <!-- START ROOMS SECTION -->
+        <section id="room" class="rooms py-5 mt-4">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-12">
+                                        <div class="text-center">
+                                                <h4>Our Rooms</h4>
+                                                <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repellat id facere repellendus blanditiis atque possimus mollitia nihil. Nobis voluptatibus nemo qui non illo veniam dolorum, ea unde id ipsa?</p>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="rows">
+                                <div class="columns">
+                                        <a href="./assets/img/gallery/image1.jpg" class="roomPopup"><img src="./assets/img/gallery/image1.jpg" alt=""></a>
+                                        <a href="./assets/img/gallery/image2.jpg" class="roomPopup"><img src="./assets/img/gallery/image2.jpg" alt=""></a>
+                                        <a href="./assets/img/gallery/image3.jpg" class="roomPopup"><img src="./assets/img/gallery/image3.jpg" alt=""></a>
+                                </div>
+
+                                <div class="columns">
+                                        <a href="./assets/img/gallery/image4.jpg" class="roomPopup"><img src="./assets/img/gallery/image4.jpg" alt=""></a>
+                                        <a href="./assets/img/gallery/image5.jpg" class="roomPopup"><img src="./assets/img/gallery/image5.jpg" alt=""></a>
+                                        <a href="./assets/img/gallery/image6.jpg" class="roomPopup"><img src="./assets/img/gallery/image6.jpg" alt=""></a>
+                                </div>
+
+                                <div class="columns">
+                                        <a href="./assets/img/gallery/image7.jpg" class="roomPopup"><img src="./assets/img/gallery/image7.jpg" alt=""></a>
+                                        <a href="./assets/img/gallery/image8.jpg" class="roomPopup"><img src="./assets/img/gallery/image8.jpg" alt=""></a>
+                                        <a href="./assets/img/gallery/image9.jpg" class="roomPopup"><img src="./assets/img/gallery/image9.jpg" alt=""></a>
+                                </div>
+
+                                <div class="columns">
+                                        <a href="./assets/img/gallery/image1.jpg" class="roomPopup"><img src="./assets/img/gallery/image1.jpg" alt=""></a>
+                                        <a href="./assets/img/gallery/image2.jpg" class="roomPopup"><img src="./assets/img/gallery/image2.jpg" alt=""></a>
+                                        <a href="./assets/img/gallery/image3.jpg" class="roomPopup"><img src="./assets/img/gallery/image3.jpg" alt=""></a>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- END ROOMS SECTION -->
+
+        <!-- START OUR SERVICE SECTION -->
+        <section id="service" class="pt-5 text-center">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-12">
+                                        <h4>Our Services</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.cusantium.</p>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-4">
+                                        <div class="iconBoxes">
+                                                <div class="icons"><i class="fas fa-car  fa-2x"></i></div>
+                                                <h4>Airport Transportation</h4>
+                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta deleniti sint eum hic atque neque accusantium debitis perferendis voluptatum, quam excepturi eligendi repudiandae odio itaque veniam quod ut eaque! Labore.</p>
+                                                <button type="button" class="btn btn-outline-dark rounded-0" onclick="dropBtn(event);">More Info</button>
+                                                <div class="dropdown-contents">
+                                                        <a href="javascrit:void(0);">Hotal Limousines</a>
+                                                        <a href="javascrit:void(0);">Drivers</a>
+                                                        <a href="javascrit:void(0);">Visit City</a>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                        <div class="iconBoxes">
+                                                <div class="icons"><i class="fas fa-clock  fa-2x"></i></div>
+                                                <h4>Quick Check In/Out</h4>
+                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta deleniti sint eum hic atque neque accusantium debitis perferendis voluptatum, quam excepturi eligendi repudiandae odio itaque veniam quod ut eaque! Labore.</p>
+                                                <button type="button" class="btn btn-outline-dark rounded-0" onclick="dropBtn(event);">More Info</button>
+                                                <div class="dropdown-contents">
+                                                        <a href="javascrit:void(0);">Early Check In</a>
+                                                        <a href="javascrit:void(0);">Lately Check Out</a>
+                                                        <a href="javascrit:void(0);">Extra Half Day</a>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                        <div class="iconBoxes">
+                                                <div class="icons"><i class="fas fa-building  fa-2x"></i></div>
+                                                <h4>24/7 Room Services</h4>
+                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta deleniti sint eum hic atque neque accusantium debitis perferendis voluptatum, quam excepturi eligendi repudiandae odio itaque veniam quod ut eaque! Labore.</p>
+                                                <button type="button" class="btn btn-outline-dark rounded-0" onclick="dropBtn(event);">More Info</button>
+                                                <div class="dropdown-contents">
+                                                        <a href="javascrit:void(0);">Cleaning Service</a>
+                                                        <a href="javascrit:void(0);">Food Order</a>
+                                                        <a href="javascrit:void(0);">Outdoor Call</a>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- END OUR SERVICE SECTION -->
+
+        <!-- START TESTIMONIALS SECTION -->
+        <section id="testimonials" class="bg-dark text-light p-4">
+                <div class="container">
+                        <div class="row text-center">
+                                <div class="testimonial-container">
+                                        <div class="fas fa-quote-right fa-quotes"></div>
+                                        <div class="fas fa-quote-left fa-quotes"></div>
+                                        <div class="conpany">
+                                                <h4 class="companyName">Rich Star Restarunt</h4>
+                                                <p class="roles">Our Outlet</p>
+                                        </div>
+                                        <p class="myTestimonial">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Ducimus quam consectetur nulla minima, optio iusto facere veritatis reiciendis
+                                                exercitationem eligendi illo, ut quasi ullam nam qui, dolor architecto suscipit.
+                                                Iste!
+                                        </p>
+                                        <div class="progress-bar"></div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- END TESTIMONIALS SECTION -->
+
+
+        <!-- START BLOG SECTION -->
+        <section id="blog" class="py-3">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-4 mb-2">
+                                        <div class="card">
+                                                <img src="https://source.unsplash.com/random/300x200 " class="" alt="blog-1">
+                                                <div class="card-body">
+                                                        <h6  class="card-title">Blog Post One</h6>
+                                                        <p class="small">Writen By M.Khun Tun on 12/5/2022</p>
+                                                        <hr>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quasi, reiciendis inventore velit vel veritatis aliquam voluptates officiis quae optio omnis ea quaerat sed aspernatur harum ex eaque ratione fugit!</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                        <div class="card">
+                                                <img src="https://source.unsplash.com/random/300x201" class="" alt="blog-1">
+                                                <div class="card-body">
+                                                        <h6  class="card-title">Blog Post One</h6>
+                                                        <p class="small">Writen By M.Khun Tun on 12/5/2022</p>
+                                                        <hr>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quasi, reiciendis inventore velit vel veritatis aliquam voluptates officiis quae optio omnis ea quaerat sed aspernatur harum ex eaque ratione fugit!</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                        <div class="card">
+                                                <img src="https://source.unsplash.com/random/300x202" class="" alt="blog-1">
+                                                <div class="card-body">
+                                                        <h6  class="card-title">Blog Post One</h6>
+                                                        <p class="small">Writen By M.Khun Tun on 12/5/2022</p>
+                                                        <hr>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quasi, reiciendis inventore velit vel veritatis aliquam voluptates officiis quae optio omnis ea quaerat sed aspernatur harum ex eaque ratione fugit!</p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- END BLOG SECTION -->
+
+        <!-- START ADV BOX SECTION -->
+        <section id="" class="py-5">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-4 mb-3">
+                                        <div class="card bg-danger text-light text-center">
+                                                <div class="card-body">
+                                                        <i class="fas fa-hiking fa-3x"></i>
+                                                        <h3>Activities</h3>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, tempore modi inventore aliquam itaque debitis voluptate! Voluptates ut error quisquam,</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                        <div class="card bg-dark text-light text-center">
+                                                <div class="card-body">
+                                                        <i class="fas fa-spa fa-3x"></i>
+                                                        <h3>Span & Wellness</h3>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, tempore modi inventore aliquam itaque debitis voluptate! Voluptates ut error quisquam,</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                        <div class="card bg-danger text-light text-center">
+                                                <div class="card-body">
+                                                        <i class="fas fa-crown fa-3x"></i>
+                                                        <h3>Wedding & Romance</h3>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, tempore modi inventore aliquam itaque debitis voluptate! Voluptates ut error quisquam,</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                        <div class="card bg-dark text-light text-center">
+                                                <div class="card-body">
+                                                        <i class="fas fa-box fa-3x"></i>
+                                                        <h3>Art</h3>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, tempore modi inventore aliquam itaque debitis voluptate! Voluptates ut error quisquam,</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                        <div class="card bg-danger text-light text-center">
+                                                <div class="card-body">
+                                                        <i class="fas fa-credit-card fa-3x"></i>
+                                                        <h3>VIA Payment</h3>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, tempore modi inventore aliquam itaque debitis voluptate! Voluptates ut error quisquam,</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                        <div class="card bg-dark text-light text-center">
+                                                <div class="card-body">
+                                                        <i class="fas fa-coffee fa-3x"></i>
+                                                        <h3>Luxury Collection</h3>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, tempore modi inventore aliquam itaque debitis voluptate! Voluptates ut error quisquam,</p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- END AADV BOX SECTION -->
+
+        <!-- START ADV TEXT SECTION -->
+        <section class="adv-container">
+                <p class="advText">Love the Nature <br> @ACT Hotel</p>
+        </section>
+        <!-- END ADV TEXT SECTION -->
+
+        <!-- START STAFFS SECTION -->
+        <section id="staffs" class="py-5">
+                <div class="container">
+                        <div class="row">
+                                <div class="cards mb-3">
+                                        <img src="./assets/img/users/user1.jpg" alt="user1">
+                                        <h4>Ms.July</h4>
+                                        <p class="title">CEO & Founder</p>
+                                        <p>Hardvard University</p>
+                                        <div>
+                                                <a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="javascript:void(0);"><i class="fab fa-twitter"></i></a>
+                                                <a href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="javascript:void(0);"><i class="fas fa-envelope"></i></a>
+                                        </div>
+                                        <button type="button">Contact</button>
+                                </div>
+
+                                <div class="cards mb-3">
+                                        <img src="./assets/img/users/user2.jpg" alt="user2">
+                                        <h4>Mr.Jadon</h4>
+                                        <p class="title">Hotel Manager</p>
+                                        <p>Oxford University</p>
+                                        <div>
+                                                <a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="javascript:void(0);"><i class="fab fa-twitter"></i></a>
+                                                <a href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="javascript:void(0);"><i class="fas fa-envelope"></i></a>
+                                        </div>
+                                        <button type="button">Contact</button>
+                                </div>
+
+                                <div class="cards mb-3">
+                                        <img src="./assets/img/users/user3.jpg" alt="user3">
+                                        <h4>Ms.Hanna</h4>
+                                        <p class="title">Finance Manager</p>
+                                        <p>Cathorid University</p>
+                                        <div>
+                                                <a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="javascript:void(0);"><i class="fab fa-twitter"></i></a>
+                                                <a href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="javascript:void(0);"><i class="fas fa-envelope"></i></a>
+                                        </div>
+                                        <button type="button">Contact</button>
+                                </div>
+
+                                <div class="cards mb-3">
+                                        <img src="./assets/img/users/team_popup.jpg" alt="user4">
+                                        <h4>Ms.Aia</h4>
+                                        <p class="title">Co Founder</p>
+                                        <p>Hardvard University</p>
+                                        <div>
+                                                <a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="javascript:void(0);"><i class="fab fa-twitter"></i></a>
+                                                <a href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="javascript:void(0);"><i class="fas fa-envelope"></i></a>
+                                        </div>
+                                        <button type="button">Contact</button>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- END STAFFS SECTION -->
+
+
+        <!-- START PROPERTY SECTION -->
+        <section id="properties" class="py-5">
+                <div class="container-fluid">
+                        <div class="row text-center">
+                                <div class="col-md-12">
+                                        <h4>Properties</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum magni adipisci tenetur vitae impedit expedita facere fuga, saepe ea assumenda maxime nemo doloribus distinctio, similique possimus rerum ex enim et.</p>
+                                </div>
+                        </div>
+
+                        <ul id="filterControl" class="list-inline text-center text-uppercase fw-bold my-3">
+                                <li class="list-inline-item properties" onclick="filterBy('all')">All <span class="mx-md-5 mx-3 text-muted">/</span></li>
+                                <li class="list-inline-item properties" onclick="filterBy('room')">Rooms <span class="mx-md-5 mx-3 text-muted">/</span></li>
+                                <li class="list-inline-item properties " onclick="filterBy('decoration')">Decoration <span class="mx-md-5 mx-3 text-muted">/</span></li>
+                                <li class="list-inline-item properties" onclick="filterBy('furniture')">Furniture <span class="mx-md-5 mx-3 text-muted">/</span></li>
+                                <li class="list-inline-item properties" onclick="filterBy('office')"> Office<span class="mx-md-5 mx-3 text-muted">/</span></li>
+                        </ul>
+
+                        <div class="container-fluid">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                        <div class="filters room"><img src="./assets/img/gallery/image1.jpg" width="200" alt=""></div>
+                                        <div class="filters room"><img src="./assets/img/gallery/image2.jpg" width="200" alt=""></div>
+                                        <div class="filters room"><img src="./assets/img/gallery/image3.jpg" width="200" alt=""></div>
+                                        <div class="filters decoration"><img src="./assets/img/gallery/image4.jpg" width="200" alt=""></div>
+                                        <div class="filters decoration"><img src="./assets/img/gallery/image5.jpg" width="200" alt=""></div>
+                                        <div class="filters decoration"><img src="./assets/img/gallery/image6.jpg" width="200" alt=""></div>
+                                        <div class="filters furniture"><img src="./assets/img/gallery/image7.jpg" width="200" alt=""></div>
+                                        <div class="filters furniture"><img src="./assets/img/gallery/image8.jpg" width="200" alt=""></div>
+                                        <div class="filters furniture"><img src="./assets/img/gallery/image9.jpg" width="200" alt=""></div>
+                                        <div class="filters office"><img src="./assets/img/gallery/image1.jpg" width="200" alt=""></div>
+                                        <div class="filters office"><img src="./assets/img/gallery/image2.jpg" width="200" alt=""></div>
+                                        <div class="filters office"><img src="./assets/img/gallery/image3.jpg" width="200" alt=""></div>
+                                        <div class="filters furniture"><img src="./assets/img/gallery/image4.jpg" width="200" alt=""></div>
+                                        <div class="filters furniture"><img src="./assets/img/gallery/image5.jpg" width="200" alt=""></div>
+                                        <div class="filters room"><img src="./assets/img/gallery/image6.jpg" width="200" alt=""></div>
+                                        <div class="filters room"><img src="./assets/img/gallery/image7.jpg" width="200" alt=""></div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- END PROPERTY SECTION -->
+
+        <!-- START CONTACT SECTION -->
+        <section id="contact" class="bg-dark py-3">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-4 d-sm-none d-md-block">
+                                                <div class="textBoxes">
+
+                                                        <div id="phone" class="tabContents">
+                                                                <h1>Phone</h1>
+                                                                <p>Office : 09 755 033 035 4</p>
+                                                                <p>Office : 09 755 033 035 7</p>
+                                                        </div>
+                                                        <div id="social" class="tabContents">
+                                                                <h1>Social</h1>
+                                                                <p>Viber : @khuntun</p>
+                                                                <p>Line : @khuntun</p>
+                                                        </div>
+                                                        <div id="website" class="tabContents">
+                                                                <h1>Website</h1>
+                                                                <p>Web : www.khuntun.com</p>
+                                                                <p>Email : khuntun@gmail.com</p>
+                                                        </div>
+                                                        <div id="address" class="tabContents">
+                                                                <h1>Address</h1>
+                                                                <p>No.25, Pinlon street, Taung Gyi,Myanmar</p>
+                                                        </div>
+
+
+
+                                                        <button type="button" id="autoClick" class="btn-tabs" onclick="textBoxes('phone',event.target, 'grey');">Phone</button>
+                                                        <button type="button" class="btn-tabs" onclick="textBoxes('social',event.target, 'steelblue');">Social</button>
+                                                        <button type="button" class="btn-tabs" onclick="textBoxes('website',this, 'slategray');">Website</button>
+                                                        <button type="button" class="btn-tabs" onclick="textBoxes('address',this, 'slateblue');">Address</button>
+                                                </div>
+                                </div>
+                                <div class="col-md-8">
+                                        <div class="card">
+                                                <div class="card-body">
+                                                        <h4 class="text-center">Please fill out this form to contact us</h4>
+                                                        <hr>
+                                                        <form action="" method="">
+                                                                <div class="row">
+                                                                        <div class="col-md-6 mb-3">
+                                                                                <div class="form-group">
+                                                                                        <input type="text" name="firstName" id="firstName" class="form-control form-control-sm rounded-0" placeholder="First Name">
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 mb-3">
+                                                                                <div class="form-group">
+                                                                                        <input type="text" name="lastName" id="lastName" class="form-control form-control-sm rounded-0" placeholder="Last Name">
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 mb-3">
+                                                                                <div class="form-group">
+                                                                                        <input type="text" name="email" id="email" class="form-control form-control-sm rounded-0" placeholder="Email">
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 mb-3">
+                                                                                <div class="form-group">
+                                                                                        <input type="text" name="phone" id="phone" class="form-control form-control-sm rounded-0" placeholder="Phone Number">
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 mb-3">
+                                                                                <div class="form-group">
+                                                                                        <textarea name="message" id="message" class="form-control rounded-0" placeholder="Message"></textarea>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="d-grid">
+                                                                                <input type="submit" class="btn btn-outline-seondary">
+                                                                        </div>
+                                                                </div>
+                                                        </form>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- END CONTACT SECTION -->
+
+
+
+
+        <!-- bs css and js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <!-- jquery js -->
+        <script src="./assets/libs/jquery-3.6.1.min.js" type="text/javascript"></script>
+        <!-- Magnific popup css and js -->
+        <script src="./assets/libs/magnificpopupmaster/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+        <!-- custom js -->
+        <script src="./app.js" type="text/javascript"></script>
+</body>
+</html>
