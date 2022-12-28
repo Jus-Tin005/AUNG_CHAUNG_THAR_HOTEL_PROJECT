@@ -467,3 +467,99 @@ transition:all 2s linear;
         background-color: #888;
 }
 /* END CONTACT SECTION */
+
+/* START CHAT BOX SECTION */
+.chatBtn {
+        width: 50px;
+        height: 50px;
+        background-color:#555;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        padding: 20px;
+        cursor: pointer;
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.8;
+}
+
+.chatPopup{
+        background-color: #fff;
+        border: 3px solid #f3f3f3;
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 10;
+
+        display: none;
+}
+
+.chatContainer{
+        min-width: 300px;
+        padding: 10px;
+}
+
+.messages {
+        overflow-y: scroll;
+}
+
+.formContainer textarea{
+        width: 100%;
+        background-color: #f2f2f2;
+        border: none;
+        outline: none;
+        margin: 5px auto;
+        resize: none;
+}
+
+.formContainer textarea:focus {
+        background-color: #ddd;
+}
+
+.formContainer .btns {
+        width: 100%;
+        background-color: steelblue;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        opacity: 0.8;
+}
+
+.formContainer .btns:nth-of-type(2){
+        background-color: red;
+}
+
+.formContainer .btns:hover, .chatBtn:hover{
+        opacity: 1;
+}
+
+.user {
+        background-color: #ddd;
+}
+
+.admin{
+        background-color: #aaa;
+}
+
+.messages .containers{
+        position: relative;
+        padding: 15px;
+}
+
+.timeRight {
+        color: #777;
+        position: absolute;
+        right: 0;
+        top: 0;
+}
+
+.timeLeft{
+        color: #777;
+}
+/* END CHAT BOX SECTION */

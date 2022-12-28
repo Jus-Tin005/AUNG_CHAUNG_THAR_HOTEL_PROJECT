@@ -190,100 +190,112 @@ setInterval(updateTestimonials,10000);
 
 
 
+
+
+
+
+
+
 // START PROPERTY SECTION
-filterBy('all')
-function filterBy(keyword){
-        var getFilters = document.getElementsByClassName('filters');
-        if(keyword === 'all'){
-                        keyword = "";
-        }
 
-        for(var x =0; x < getFilters.length;x++){
-                // console.log(getFilters[x].className.indexOf(keyword) > -1);
+ filterBy('all');
+ function filterBy(keyword){
+     // console.log(keyword);
+     var getFilters = document.querySelectorAll(".filters");
+     // console.log(getFilters)
 
-                removeShowClass(getFilters[x], 'show');
+     if(keyword === 'all'){
+        keyword = '';
+     }
 
-                if(getFilters[x].className.indexOf(keyword) > -1){
-                        addShowClass(getFilters[x], 'show')
-                }else{
-                        // console.log("hey");
-                }
+     for(var x = 0 ; x < getFilters.length ; x++){
+         // console.log(getFilters[x])
+         // console.log(getFilters[x].className.indexOf(keyword) > -1)
 
-        }
+         removeShowClass(getFilters[x],'show');
 
-}
-
-
-function addShowClass(ele,opt){
-        // console.log(ele);
-        // console.log(opt);
-
-        var getFilters = ele.className.split(" ");
-        // console.log(getFilters);
-
-        var getOpt = opt.split(" ");
-        // console.log(getOpt);
-        // console.log(getOpt.length);
-        // console.log(opt.length);
-
-        for(var y = 0; y < getOpt.length; y++){
-                // console.log(getOpt[y]);
-
-                // console.log(getFilters.indexOf(getOpt[y]) ===  -1);
-
-                if(getFilters.indexOf(getOpt[y]) === -1){
-                        // ele.classList.add(getOpt[y]);
-                        ele.className += " " + getOpt[y];
-                }
-        }
-}
-
-function removeShowClass(ele,opt){
-        // console.log(ele);
-        // console.log(opt);
-
-        var getFilters = ele.className.split(" ");
-        // console.log(getFilters);
-
-        var getOpt = opt.split(" ");
-        // console.log(getOpt);
-        // console.log(getOpt.length);
-
-        for(var k =0; k < getFilters.length; k++){
-                // console.log(getFilters[k]);
-                // console.log(getFilters[0]);
-                // console.log(getFilters[1]);
-
-                while(getFilters.indexOf(getFilters[k]) > -1){
-                        getFilters.splice(getFilters[k].indexOf("show"),1);
-                }
-        }
-
-        // console.log(getFilters);
-        // console.log(getFilters.join(" "));
-
-        ele.className = getFilters.join(" ");
-        // console.log(ele.className);
-}
-
-var getFiltersControl = document.getElementById("filterControl");
-var getLists = document.getElementsByClassName("list-inline-item");
+         if(getFilters[x].className.indexOf(keyword) > -1){
+                addShowClass(getFilters[x],'show');
+         }
+     }
 
 
-for(var i = 0; i < getLists.length; i++){
 
-        getLists[i].addEventListener("click",()=>{
-        var currentActives = document.querySelector(".activeItems");
-        console.log(currentActives);
-        // currentActives.className = currentActives.className.replace(" activeItems"," ")
+ }
 
-        this.className += " activeItems";
-      });
-}
+ function addShowClass(ele,opt){
+     // console.log(ele)
+     var getFilters = ele.className.split(" ");
+     // console.log(getFilters)
 
+     var getOpt = opt.split(" ");
+     // console.log(getOpt);
+     // console.log(getOpt.length);
+     // console.log(opt.length)
 
+     for(var y = 0 ; y < getOpt.length ; y++){
+         // console.log(getOpt[y]);
+         // console.log(getFilters[y].indexOf(getOpt[y] === -1));
+
+         if(getFilters[y].indexOf(getOpt[y]) === -1){
+             // ele.classList.add(getOpt[y])
+             ele.className += " "+getOpt[y];
+         }
+
+     }
+ }
+
+ function removeShowClass(ele,opt){
+     // console.log(ele)
+     let getFilters = ele.className.split(' ');
+//      console.log(getFilters);
+
+     // getFilters.forEach(function(getFilters){
+      // console.log(getFilters.indexOf(opt) > -1)
+     //     if(getFilters.indexOf(opt) > -1){
+     //         ele.classList.remove(opt)
+     //     }
+     // });
+
+     let getOpt = opt.split();
+//      console.log(getOpt.length);
+
+     for(var k = 0 ; k < getFilters.length ; k++){
+         // console.log(getFilters[k]);
+         // console.log(getFilters[0]);
+         // console.log(getFilters[1]);
+
+         // console.log(getFilters[k])
+
+         while(getFilters.indexOf(getOpt[k]) > -1){
+             getFilters.splice(getFilters.indexOf(getOpt[k]),1)
+         }
+     }
+
+     // console.log(getFilters)
+     // console.log(getFilters.join(' '))
+
+     ele.className = getFilters.join(' ');
+//      console.log(ele.className);
+
+ }
+
+ var getFilterControl = document.getElementById('filterControl');
+ let getListitems = getFilterControl.getElementsByClassName('list-inline-item');
+
+ for(var i = 0 ; i < getListitems.length ; i++){
+        getListitems[i].addEventListener('click',function(){
+         let currActives = document.querySelector('.activeItems');
+         currActives.className = currActives.className.replace(' activeItems'," ");
+         this.classList.add('activeItems')
+     })
+ }
 
 // END PROPERTY SECTION
+
+
+
+
 
 
 // START CONTACT SECTION
@@ -303,3 +315,15 @@ const textBoxes = (link, evn, btnColor) => {
 
 document.getElementById("autoClick").click();
 // END CONTACT SECTION
+
+// START CHAT BOX SECTION
+const getMyChat = document.getElementById("myChat");
+
+const openChatBox = () => {
+        getMyChat.style.display= "block"
+}
+
+const closeChatBox = () => {
+        getMyChat.style.display = "none";
+}
+// END CHAT BOX SECTION

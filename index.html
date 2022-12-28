@@ -29,10 +29,10 @@
                                         <div id="mynav" class="navbar-collapse collapse">
                                                 <ul class="navbar-nav me-auto">
                                                         <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                                                        <li class="nav-item"><a href="#" class="nav-link active">Rooms</a></li>
-                                                        <li class="nav-item"><a href="#" class="nav-link active">Blog</a></li>
-                                                        <li class="nav-item"><a href="#" class="nav-link active">Restarunt</a></li>
-                                                        <li class="nav-item"><a href="#" class="nav-link active">Contact</a></li>
+                                                        <li class="nav-item"><a href="#room" class="nav-link active">Rooms</a></li>
+                                                        <li class="nav-item"><a href="#blog" class="nav-link active">Blog</a></li>
+                                                        <li class="nav-item"><a href="#service" class="nav-link active">Restarunt</a></li>
+                                                        <li class="nav-item"><a href="#contact" class="nav-link active">Contact</a></li>
                                                         <li class="nav-item dropdowns"><a href="#" class="nav-link active drop-btn" onclick="dropBtn(event);">FAQ</a>
                                                                 <div  class="dropdown-contents myDropdowns">
                                                                         <input type="text" name="search" id="search" class="search" onkeyup="dropFilter();" placeholder="search....">
@@ -417,7 +417,7 @@
                         </div>
 
                         <ul id="filterControl" class="list-inline text-center text-uppercase fw-bold my-3">
-                                <li class="list-inline-item properties" onclick="filterBy('all')">All <span class="mx-md-5 mx-3 text-muted">/</span></li>
+                                <li class="list-inline-item properties activeItems" onclick="filterBy('all')">All <span class="mx-md-5 mx-3 text-muted">/</span></li>
                                 <li class="list-inline-item properties" onclick="filterBy('room')">Rooms <span class="mx-md-5 mx-3 text-muted">/</span></li>
                                 <li class="list-inline-item properties " onclick="filterBy('decoration')">Decoration <span class="mx-md-5 mx-3 text-muted">/</span></li>
                                 <li class="list-inline-item properties" onclick="filterBy('furniture')">Furniture <span class="mx-md-5 mx-3 text-muted">/</span></li>
@@ -527,6 +527,145 @@
                 </div>
         </section>
         <!-- END CONTACT SECTION -->
+
+        <!-- START OUR PRICING SECTION -->
+        <section id="pricing" class="py-3">
+                <div class="container">
+                        <div class="row text-center">
+                                <div class="col-md-12">
+                                        <h4>Our Pricing</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto eius est provident quis, placeat, in veniam quisquam obcaecati doloremque numquam ducimus repudiandae repellat! Amet error sed asperiores praesentium similique.</p>
+                                </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="col-md-4 mb-3">
+                                        <div class="card text-center">
+                                                <div class="card-header bg-dark text-white">
+                                                        <h3>Single Room</h3>
+                                                </div>
+                                                <div class="card-body">
+                                                        <h4>$100</h4>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus repudiandae quia tempore quasi ratione sunt vel non impedit perferendis voluptatem ullam molestiae, aperiam minus accusantium, modi suscipit. Id, similique nulla?</p>
+                                                        <ul class="list-group">
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Wi-Fi</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Parking</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Pool</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Fitness Center</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Spa</li>
+                                                        </ul>
+                                                        <div class="d-grid">
+                                                                <a href="#" class="btn btn-dark">Checkout</a>
+                                                        </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                        <b>Airport Transportation Free</b>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                        <div class="card text-center">
+                                                <div class="card-header bg-dark text-white">
+                                                        <h3>Deluxe Room</h3>
+                                                </div>
+                                                <div class="card-body">
+                                                        <h4>$150</h4>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus repudiandae quia tempore quasi ratione sunt vel non impedit perferendis voluptatem ullam molestiae, aperiam minus accusantium, modi suscipit. Id, similique nulla?</p>
+                                                        <ul class="list-group">
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Wi-Fi</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Parking</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Pool</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Fitness Center</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Spa</li>
+                                                        </ul>
+                                                        <div class="d-grid">
+                                                                <a href="#" class="btn btn-dark">Checkout</a>
+                                                        </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                        <b>Airport Transportation Free</b>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                        <div class="card text-center">
+                                                <div class="card-header bg-dark text-white">
+                                                        <h3>Family Room</h3>
+                                                </div>
+                                                <div class="card-body">
+                                                        <h4>$200</h4>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus repudiandae quia tempore quasi ratione sunt vel non impedit perferendis voluptatem ullam molestiae, aperiam minus accusantium, modi suscipit. Id, similique nulla?</p>
+                                                        <ul class="list-group">
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Wi-Fi</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Parking</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Pool</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Fitness Center</li>
+                                                                <li class="list-group-item"><i class="fas fa-check"></i>Spa</li>
+                                                        </ul>
+                                                        <div class="d-grid">
+                                                                <a href="#" class="btn btn-dark">Checkout</a>
+                                                        </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                        <b>Airport Transportation Free</b>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- END OUR PRICING SECTION -->
+
+        <!-- START FOOTER SECTION -->
+        <footer class="bg-dark pt-3">
+                <ul class="nav justify-content-center borer-bottom pb-3 mb-3">
+                        <li class="nv-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+                        <li class="nv-item"><a href="#room" class="nav-link px-2 text-muted">Rooms</a></li>
+                        <li class="nv-item"><a href="#pricing" class="nav-link px-2 text-muted">Pricing</a></li>
+                        <li class="nv-item"><a href="#contact" class="nav-link px-2 text-muted">Contact</a></li>
+                        <li class="nv-item"><a href="#blog" class="nav-link px-2 text-muted">FAQs</a></li>
+                </ul>
+                <div class="d-flex justify-content-center text-light">
+                        <p>&copy; <span id="getYears"></span>Copyright, Inc. All rights Reserved.</p>
+                </div>
+        </footer>
+        <!-- END FOOTER SECTION -->
+
+
+        <!-- START CHAT BOX SECTION -->
+        <button type="button" class="chatBtn" onclick="openChatBox();"><i class="fas fa-comment-alt"></i></button>
+        <div id="myChat" class="chatPopup">
+                <div  class="chatContainer">
+                        <h4>Chat</h4>
+                        <div class="messages">
+                                <div class="containers admin">
+                                        <p>Hello! How can I help you?</p>
+                                        <span class="timeRight">13:00</span>
+                                </div>
+                                <div class="containers user">
+                                        <p>Thank you reply</p>
+                                        <span class="timeLeft">13:05</span>
+                                </div>
+                                <div class="containers admin">
+                                        <p>Do you want to reserve rooms?</p>
+                                        <span class="timeRight">13:08</span>
+                                </div>
+                                <div class="containers user">
+                                        <p>Sure! Let me seet the price for mountain view.</p>
+                                        <span class="timeLeft">13:10</span>
+                                </div>
+                        </div>
+                        <form class="formContainer" action="" method="">
+                                <textarea name="message" id="message" class="message" placeholder="Message Here.."></textarea>
+                                <button type="submit" class="btns">Send</button>
+                                <button type="button" class="btns" onclick="closeChatBox();">Close</button>
+                        </form>
+                </div>
+        </div>
+
+        <!-- END CHAT BOX SECTION -->
 
 
 
